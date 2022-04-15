@@ -34,7 +34,8 @@ button{
     background-color: #fff;
 }
 
-button:hover{
+button:hover,
+button:focus {
     background-color: #1e1e1e;
     transition: background-color 3.5s ease-out;
     outline: 0;
@@ -42,13 +43,9 @@ button:hover{
     transition: color 2s ease-out;
 }
 
-.container-index{
-    max-width: 1400px;
-    margin: auto ;
-}
-
 header{
     background-color: rgba(94, 94, 94, 0.564);
+    margin-top: 10px;
 }
 
 header .logo{
@@ -59,6 +56,7 @@ header .logo{
     font-size: 1.8em;
 }
 
+
 header .container-index{
     display: flex;
     flex-direction: column;
@@ -68,6 +66,7 @@ header .container-index{
 header nav{
     position: relative left;
     padding-left: 10px;
+    font-size: 30px;
 }
 
 header a{
@@ -98,11 +97,9 @@ header a:hover{
     background-image: url(/assets/img/Somos.jpg);
 }
 
-
-
-#somosCEM .container-index{
-    text-align: center;
-    padding: 200px 12px;
+#somosCEM .texto-somos{
+    display: flex;
+    align-items: center;
 }
 
 .nuestros-programas{
@@ -220,6 +217,9 @@ footer .container-index{
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 0px;
+        display: flex;
+        text-align: center;
+        font-size: 15px;
     }
 
 
@@ -232,6 +232,12 @@ footer .container-index{
         background-image: url(/assets/img/Somos.jpg);
         background-position: center center;
         background-size: cover;
+    }
+
+    #somosCEM .texto-somos{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     #hero h1{
@@ -293,8 +299,7 @@ footer .container-index{
 
     #somosCEM .container-index{
         display: flex;
-        justify-content: space-evenly;
-        padding: 100px;
+        padding: 300px 10px;
     }
 
     #somosCEM .texto-somos{
@@ -304,16 +309,9 @@ footer .container-index{
         padding-left: 30px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
     }
 
-    #somosCEM .img-containersindex{
-        background-image: url(/assets/img/Somos.jpg);
-        background-size: cover;
-        background-position: center right;
-        height: 500px;
-        width: 600px;
-    }
 
     #hero h1{
         font-size: 5em;
@@ -389,9 +387,6 @@ ul {
     font-size: 3em;
 }
 
-.contact-container{
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 3);
-}
 .contact-container > * {
     padding: 1em;
 }
@@ -446,33 +441,19 @@ ul {
     outline: 0;
 }
 
+.content{
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 3);
+}
+
 .contact-info{
-    background-color: #000;
+    background-color: #222222;
+    padding: 5px 5px;
 }
 
 .contact-info h4, .contact-info ul, .contact-info p {
     text-align: center;
     margin: 0 0 1rem 0;
 }
-
-@media(min-width: 768px) {
-    body {
-        padding: 0 4em;
-    }
-    .contact-wrapper {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-    .contact-wrapper > * {
-        padding: 2em;
-    }
-    .contact-info h4,
-    .contact-info ul,
-    .contact-info p {
-        text-align: left;
-    }
-}
-
 /*Contacto*/
 
 
@@ -504,10 +485,12 @@ ul {
     width: 100%;
     margin: 0;
     padding: 10px;
+    font-size: 1em;
+    text-align: left;
 }
 
-.gallery__item:nth-child(4) {
-    grid-column-start: span 2;
+.gallery__item:nth-child(1) {
+    grid-column-start: span 1;
 }
 
 .gallery__item:nth-child(5) { /*Con este codigo selecciono al hijo dentro del padre container, o se a la imagen 4*/
@@ -520,7 +503,49 @@ ul {
 
 /*mediqueries*/
 
+@media (min-width: 320px) {
+    .galery-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery__item:nth-child(1) {
+        grid-column-start: span 3;
+    }
+    .gallery__item:nth-child(2) {
+        grid-column-start: span 2;
+        grid-row: span 1;
+    }
+    .gallery__item:nth-child(3) {
+        grid-column-start: span 1;
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(7){
+        grid-column-start: span 4 3;
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(9) {
+        grid-row-start: span 1;
+        grid-column-start: span 3;
+    }
+}
+
+
 @media (min-width:768px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+    
     .galery-container{
         grid-template-columns: repeat(4, 1fr);
     }
@@ -547,6 +572,14 @@ ul {
     }
     .gallery__item:nth-child(1) {
         grid-column-start: span 2;
+        grid-row-start: span 1;
+    }
+    .gallery__item:nth-child(2) {
+        grid-column-start: span 3;
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(3) {
+        grid-column-start: span 2;
         grid-row-start: span 2;
     }
     .gallery__item:nth-child(4) {
@@ -554,11 +587,12 @@ ul {
         grid-row-start: span 2;
     }
     .gallery__item:nth-child(5) {
-        grid-row-start: span 3;
-    }
-    .gallery__item:nth-child(9) {
-        grid-row-start: span 2;
+        grid-row-start: span 1;
         grid-column-start: span 2;
+    }
+    .gallery__item:nth-child(6) {
+        grid-column-start: span 4;
+        grid-row: span 2;
     }
     .gallery__item:nth-child(7) {
         grid-row-start: span 2;
@@ -568,4 +602,41 @@ ul {
         grid-row-start: span 2;
         grid-column-start: span 1;
     }
+    .gallery__item:nth-child(9) {
+        grid-column-start: span 4;
+        grid-row-start: span 2;
+    }
+}
+
+/*registro*/ /*este registro estara en proximas actualizaciones*/
+
+.register__div{
+    display: block;
+    width: 100%;
+    padding: .7em;
+    border: 1px solid white;
+    background: none;
+    outline: none;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+}
+
+.register__div p{
+    margin: 0 0 1rem 0
+}
+
+/*sobre nosotros*/
+
+#hero_sobrenosotros{
+    background-image: url(../assets/img/backsobre.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 200vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }

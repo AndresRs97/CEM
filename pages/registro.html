@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo/CEM.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <title>CEM-Regristro</title>
 </head>
 <body>
@@ -11,12 +16,50 @@
         <div class="container-index">
             <p class="logo">CEM</p>
             <nav>
-                <a href="pages/galeria.html">Galeria</a>
-                <a href="pages/contacto.html">Contacto</a>
-                <a href="pages/sobrenosotros.html">Sobre Nosotros</a>
+                <a href="../pages/galeria.html">Galeria</a>
+                <a href="../pages/contacto.html">Contacto</a>
+                <a href="../pages/sobrenosotros.html">Sobre Nosotros</a>
             </nav>
         </div>
     </header>
     <!--Moficiar el registro para  proximamente hacer un registro en si-->
+    <section id="register_section">
+        <div class="register__div">
+            <form action="">
+                <p>
+                    <label>Usuario</label>
+                    <input type="text" name="usuario">
+                </p>
+                <p>
+                    <label>Contraseña</label>
+                    <input type="password" name="contraseña">
+                </p>
+                <p>
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </p>
+                <p>
+                    <label>Nombre y Apellido</label>
+                    <input type="text" name="nombreyapellido">
+                </p>
+                <p>
+                    <label>Pais</label>
+                    <input type="text">
+                </p>
+                <p class="block">
+                    <button type="submit">
+                    Enviar
+                    </button>
+                </p>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <section class="container-index">
+            <p>Todos los derechos reservados &copy; CEM-ANNIC 2022</p>
+        </section>
+    </footer>
+
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
