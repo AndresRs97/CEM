@@ -640,3 +640,10 @@ ul {
     background-size: cover;
     background-position: center center;
 }
+
+/*Prueba galeria*/
+
+.paginations{
+    display: flex;
+    justify-content: center;
+}
