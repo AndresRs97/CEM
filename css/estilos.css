@@ -326,7 +326,7 @@ footer .container-index{
 
     .nuestros-programas .cartas{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .nuestros-programas p{
@@ -356,6 +356,7 @@ footer .container-index{
         background-image: url(/assets/img/Carta03.jpg);
     }
 }
+
 
 
 
@@ -617,6 +618,16 @@ ul {
     header nav{
         font-size: 25px;
     }
+
+    .carta{ /*Boton mas abajo*/
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
 }
 
 /*registro*/ /*este registro estara en proximas actualizaciones*/
@@ -647,6 +658,7 @@ ul {
     background-size: cover;
     background-position: center center;
     font-size: 23px;
+    padding: 5px;
 }
 
 .sobrenostros_padre{
@@ -665,26 +677,18 @@ ul {
 
 /*Prueba galeria*/
 
-.paginations{
-    display: flex;
-    justify-content: center;
-}
-
-.respmenu a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 2px solid #090909;
-    max-width: 200px;
-    background: #0f0f10;
-    font-variant: small-caps;
-    text-shadow: 1px 1px black;
-}
 
 .texto-somos p{
     text-align: center;
 }
+
+.link__videoarte{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 /*# sourceMappingURL=estilos.css.map */
 
