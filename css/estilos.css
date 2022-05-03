@@ -135,6 +135,7 @@ header a:hover {
   border-radius: 10px;
 }
 
+
 .carta:first-child {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5)) url(/assets/img/Carta01.jpg);
 }
@@ -146,6 +147,7 @@ header a:hover {
 .carta:nth-child(3) {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5)) url(/assets/img/Carta03.jpg);
 }
+
 
 .imgrecientes {
   background-color: rgb(34, 33, 33);
@@ -207,6 +209,10 @@ footer .container-index {
     justify-content: space-between;
   }
 
+  body{
+    padding: 0;
+  }
+
   header nav {
     flex-direction: row;
     padding-bottom: 0;
@@ -231,6 +237,23 @@ footer .container-index {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+  }
+
+  h2{
+    font-size: 25px;
+  }
+
+
+
+  .videos_arte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .videos_arte a{
+    font-size: 40px;
   }
 
   #hero h1 {
@@ -272,8 +295,24 @@ footer .container-index {
   footer {
     text-align: center;
   }
+
+  .sobrenostros_padre{
+    font-size: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
 }
 @media (min-width: 720px) {
+
+  .sobrenostros_padre{
+    font-size: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
   header {
     width: 100%;
   }
@@ -510,11 +549,18 @@ ul {
     grid-row-start: span 1;
     grid-column-start: span 3;
   }
+
+.div__fotografia h2{
+  font-size: 25px;
+}
+
+.div__fotografia a{
+  font-size: 25px;
+  align-items: center;
+}
+
 }
 @media (min-width: 768px) {
-  body {
-    padding: 0 4em;
-  }
 
   .contact-wrapper {
     display: grid;
@@ -611,6 +657,15 @@ ul {
   header nav {
     font-size: 25px;
   }
+
+  .sobrenostros_padre{
+    background-position: center center;
+    font-size: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+  }
+
 }
 /*registro*/
 /*este registro estara en proximas actualizaciones*/
@@ -670,11 +725,11 @@ ul {
   grid-area: 5/1/6/2;
 }
 
-/*Prueba galeria*/
-.paginations {
-  display: flex;
-  justify-content: center;
-}
+
+
+
+
+
 
 /*# sourceMappingURL=estilos.css.map */
 
